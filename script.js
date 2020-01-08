@@ -5,9 +5,15 @@ var Person = function(name,birthYear,education,email,calcAge){
     this.birthYear = birthYear;
     this.education = education;
     this.email = email;
-    this.calcAge = function(){
-        this.age = 2020 - this.birthYear;
+//method within a functional constructor
+    // this.calcAge = function(){
+    //     this.age = 2020 - this.birthYear;
+    // }
+
     }
+    //we can also create a method in a constructor's prototype
+    Person.prototype.calcAge = function(){
+        this.age = 2020 - this.birthYear;
     }
 
 var iddi = new Person('IDDI',1993,'DEGREE','adammsangi@gmail.com');
