@@ -59,6 +59,63 @@ var waridi = Object.create(myproto,{
 waridi.calcAge();
 console.log(waridi);
 console.log(waridi.lastName);
+//ADVANCED FUNCTIONS===========================================================
+var years = [1990,1978,1956,1993,1999];
+function calcAges(arr,fn){
+    var arrResult = [];
+    for(var i=0; i<arr.length; i++){
+        arrResult.push(fn(arr[i]));
+    }
+    return arrResult;
+}
+function calcAge(el){
+return 2020 - el;
+}
+var ages = calcAges(years,calcAge);
+console.log(ages);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
