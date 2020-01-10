@@ -131,6 +131,124 @@ console.log(dice);
     console.log('your result namba is '+yr);
 })(190);
 
+(function(birthYear){
+    var age = 2020 - birthYear;
+    console.log('your age is '+age);
+})(1993);
+//========================================POWER OF CLOSURES====================
+
+/*
+var interview = function(job){
+    if(job === 'doctor'){
+        return function(name){
+            console.log(name +' which kind of doctor are you??');
+        }
+    }else if(job === 'teacher'){
+        return function(name){
+            console.log('which lesson do you teach '+name);
+        }
+    }else if(job === 'developer'){
+        return function(name){
+            console.log('what are you developing so far? '+name);
+        }
+    }else{
+        return function(name){
+            console.log(name+' tell us your job tittle..');
+        }
+    }
+}
+
+var developerIntervw = interview('developer');
+developerIntervw('iddimsangi');
+
+var designerIntervw = interview('designer');
+designerIntervw('harouni');
+
+//========================simple call===========================
+interview('doctor')('edocumwembe');
+interview('teacher')('waridi');
+
+*/
+
+function interviewByClosure(yourJob){
+var teacherQsn = 'what lesson do you teach?';
+var developerQsn = 'which system are you developing?';
+var designerQsn = 'what are you daily designing at home?';
+// if(yourJob === 'designer'){
+//     return function(name){
+//         console.log(name+' '+designerQsn);
+//     }
+// }else if(yourJob === 'teacher'){
+//     return function(name){
+//         console.log(teacherQsn+', '+name);
+//     }
+// }else if(yourJob === 'developer'){
+//     return function(name){
+//         console.log(developerQsn);
+//     }
+// }else{
+//     return function(name){
+//         console.log('your job is currently not available '+name);
+//     }
+return function(name){
+
+    if(yourJob === 'designer'){
+            
+                console.log(name+' '+designerQsn);
+
+        }else if(yourJob === 'teacher'){
+            
+                console.log(teacherQsn+', '+name);
+            
+        }else if(yourJob === 'developer'){
+           
+                console.log(developerQsn);
+            
+        }else{
+           
+                console.log('your job is currently not available '+name);
+            }
+
+}
+}
+
+var teachIntv = interviewByClosure('teacher');
+teachIntv('jamaly');
+teachIntv('bennet');
+teachIntv('alby');
+
+//==================using simple closures calls===================
+interviewByClosure('developer')('idriss');
+interviewByClosure('teacher')('idriss');
+interviewByClosure('engineer')('Nurdin');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
