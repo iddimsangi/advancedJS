@@ -84,11 +84,56 @@ function heartRateCalc(el){
 }
 var ages = calcAges(years,calcAge);
 console.log(ages);
-
 var rates = calcAges(ages,heartRateCalc);
 console.log(rates);
 var fullAges = calcAges(ages,ifFullAge);
 console.log(fullAges);
+
+//FUNCTION THAT RETURNS FUNCTION
+var interview = function(job){
+    if(job === 'doctor'){
+        return function(name){
+            console.log(name +' which kind of doctor are you??');
+        }
+    }else if(job === 'teacher'){
+        return function(name){
+            console.log('which lesson do you teach '+name);
+        }
+    }else if(job === 'developer'){
+        return function(name){
+            console.log('what are you developing so far? '+name);
+        }
+    }else{
+        return function(name){
+            console.log(name+' tell us your job tittle..');
+        }
+    }
+}
+
+var developerIntervw = interview('developer');
+developerIntervw('iddimsangi');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
