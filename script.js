@@ -113,6 +113,45 @@ var interview = function(job){
 var developerIntervw = interview('developer');
 developerIntervw('iddimsangi');
 
+var designerIntervw = interview('designer');
+designerIntervw('harouni');
+
+//========================simple call===========================
+interview('doctor')('edocumwembe');
+interview('teacher')('waridi');
+//=============================IIFE(immediately invocked function)=================================
+
+(function(){
+var dice = Math.floor(Math.random()*10)+1;
+console.log(dice);
+})();
+
+(function(namba){
+    var yr = 206 - namba;
+    console.log('your result namba is '+yr);
+})(190);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
