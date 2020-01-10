@@ -28,6 +28,55 @@ console.log(iddi,adam,waridi);
 console.log(iddi.lastName);
 Date();
 
-document.querySelector('.btn').addEventListener('click',function(){
-    window.print();
+// document.querySelector('.btn').addEventListener('click',function(){
+//     window.print();
+// })
+
+//create object using OBJECT constructor
+var myproto = {
+    name:'msangi',
+    lastName:'iddi',
+    calcAge:function(){
+        this.yearOfexpiirience = 2020 - this.age;
+    }
+}
+ 
+var idd = new Object(myproto);
+idd.age = 19;
+idd.tribe = 'pare',
+idd.movies = 'series'
+idd.calcAge();
+console.log(idd);
+console.log(myproto);
+
+//you can also use Object.create
+//you can choose to use a prototype
+var waridi = Object.create(myproto,{
+    age:{ value: 55},
+    tribe:{value:'chaga'},
+    movies:{value:'power'}
 })
+waridi.calcAge();
+console.log(waridi);
+console.log(waridi.lastName);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
