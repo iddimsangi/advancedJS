@@ -70,9 +70,25 @@ function calcAges(arr,fn){
 }
 function calcAge(el){
 return 2020 - el;
+
+}
+function ifFullAge(el){
+    return el >= 30;
+}
+function heartRateCalc(el){
+    if(el >= 18 && el <= 81){
+        return 206.5-(.65*el);
+    }else{
+        return -1;
+    }
 }
 var ages = calcAges(years,calcAge);
 console.log(ages);
+
+var rates = calcAges(ages,heartRateCalc);
+console.log(rates);
+var fullAges = calcAges(ages,ifFullAge);
+console.log(fullAges);
 
 
 
