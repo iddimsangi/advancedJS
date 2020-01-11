@@ -221,6 +221,99 @@ teachIntv('alby');
 interviewByClosure('developer')('idriss');
 interviewByClosure('teacher')('idriss');
 interviewByClosure('engineer')('Nurdin');
+//==========================More examples in call(),apply() and bind()===
+
+//Demo with javascript .call()
+
+// var obj = {name:"Niladri"};
+
+// var greeting = function(a,b,c){
+//     return "welcome "+this.name+" to "+a+" "+b+" in "+c;
+// };
+
+// console.log(greeting.call(obj,"Newtown","KOLKATA","WB"));
+// // returns output as welcome Niladri to Newtown KOLKATA in WB
+
+// // array of arguments to the actual function
+// var args = ["Newtown","KOLKATA","WB"];  
+// console.log("Output using .apply() below ")
+// console.log(greeting.apply(obj,args));
+
+
+// const module = {
+//     x: 42,
+//     getX: function() {
+//       return this.x;
+//     }
+//   }
+  
+//   const unboundGetX = module.getX;
+//   console.log(unboundGetX); // The function gets invoked at the global scope
+//   // expected output: undefined
+  
+//   const boundGetX = unboundGetX.bind(module);
+//   console.log(boundGetX());
+//   // expected output: 42
+
+
+function interviewQuestion(job) {
+
+    if (job == 'designer') {
+    
+    var a = ', can you explain what UX design is?';
+    
+    } else if (job == 'teacher') {
+    
+    var a = ', what subject do you teach?';
+    
+    } else {
+    
+    var a = ', what do you do?';
+    
+    }
+    
+    
+    
+    return function(name) {
+    
+    console.log(name + a);
+    
+    }
+      
+    }
+
+   //===========================APPLY()======================================
+    var designerQsn = interviewQuestion('designer');
+    designerQsn('adam msangi');
+
+    var teacherQsn = interviewQuestion('teacher');
+    teacherQsn('harith');
+
+var myArry = [1,9,'ten','wali'];
+var arr = ['edmund','flowers',1990,'juice'];
+// myArry.push(myArry);
+// console.log(myArry);
+
+myArry.push.apply(myArry,arr);
+console.log(myArry);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
